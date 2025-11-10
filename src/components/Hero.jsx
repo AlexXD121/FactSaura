@@ -134,7 +134,7 @@ export default function Hero() {
                   y: -10,
                   transition: { duration: 0.3 }
                 }}
-                className="group relative bg-gradient-to-br from-white to-gray-50 text-black p-8 rounded-2xl shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 border border-gray-200/50 backdrop-blur-sm overflow-hidden"
+                className="group relative bg-gradient-to-br from-white to-gray-50 text-black p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200/50 backdrop-blur-sm overflow-hidden"
               >
                 {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${agent.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -173,6 +173,7 @@ export default function Hero() {
           className="text-center"
         >
           <motion.button 
+            onClick={(e) => e.preventDefault()}
             className="group relative bg-gradient-to-r from-custom-cyan to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-black px-10 py-5 rounded-2xl text-xl font-bold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -235,7 +235,10 @@ export default function RecentDetections() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center mt-8"
         >
-          <button className="bg-custom-cyan hover:bg-cyan-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button 
+            onClick={(e) => e.preventDefault()}
+            className="bg-custom-cyan hover:bg-cyan-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
             View All Detections →
           </button>
         </motion.div>

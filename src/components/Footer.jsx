@@ -14,27 +14,36 @@ export default function Footer() {
         {/* Center */}
         <div className="flex space-x-6 mb-4 md:mb-0">
           {["home", "features", "demo", "contact"].map((link) => (
-            <a
+            <button
               key={link}
-              href={`#${link}`}
+              onClick={(e) => e.preventDefault()}
               className="hover:text-custom-cyan transition-colors capitalize"
             >
               {link}
-            </a>
+            </button>
           ))}
         </div>
 
         {/* Right */}
         <div className="flex space-x-6">
-          <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-custom-cyan hover:text-black transition-all duration-300 transform hover:scale-110">
+          <button 
+            onClick={(e) => e.preventDefault()}
+            className="p-3 rounded-full bg-gray-800 hover:bg-custom-cyan hover:text-black transition-all duration-300 transform hover:scale-110"
+          >
             <Github size={20} />
-          </a>
-          <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110">
+          </button>
+          <button 
+            onClick={(e) => e.preventDefault()}
+            className="p-3 rounded-full bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+          >
             <Twitter size={20} />
-          </a>
-          <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110">
+          </button>
+          <button 
+            onClick={(e) => e.preventDefault()}
+            className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+          >
             <Linkedin size={20} />
-          </a>
+          </button>
         </div>
       </div>
 

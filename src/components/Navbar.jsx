@@ -22,9 +22,9 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {["Home", "Features", "Demo", "Contact"].map((link, index) => (
-            <motion.a
+            <motion.button
               key={link}
-              href={`#${link.toLowerCase()}`}
+              onClick={(e) => e.preventDefault()}
               className="relative text-white hover:text-custom-cyan transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-white/5"
               whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: -10 }}
@@ -38,7 +38,7 @@ export default function Navbar() {
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.a>
+            </motion.button>
           ))}
         </div>
         {/* Mobile Menu Button */}
@@ -76,14 +76,13 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col space-y-4">
             {["Home", "Features", "Demo", "Contact"].map((link) => (
-              <a
+              <button
                 key={link}
-                href={`#${link.toLowerCase()}`}
                 onClick={() => setOpen(false)}
-                className="text-white hover:text-custom-cyan transition-colors"
+                className="text-white hover:text-custom-cyan transition-colors text-left"
               >
                 {link}
-              </a>
+              </button>
             ))}
           </div>
         </motion.div>
